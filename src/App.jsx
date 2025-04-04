@@ -10,7 +10,7 @@ function getVisibleMovies(movies, query) {
     return initialString.toLowerCase().includes(normalizedQuery);
   };
 
-  return [...movies].filter(movie => {
+  return movies.filter(movie => {
     return (
       stringContainsSearchText(movie.title) ||
       stringContainsSearchText(movie.description)
